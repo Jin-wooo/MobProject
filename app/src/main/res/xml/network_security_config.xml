@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted = "true">
+        <domain includeSubdomains="true">maps.daum-img.net</domain>
+        <domain includeSubdomains="true">emart24.co.kr</domain>
+        <domain includeSubdomains="true">cdn2.bgfretail.com</domain>
+        <domain includeSubdomains="true">7-eleven.co.kr</domain>
+        <domain includeSubdomains="true">bgf-cu.xcache.kinxcdn.com</domain>
+        <domain includeSubdomains="true"> gs25appimg.gsretail.com</domain>
+        <domain includeSubdomains="true"> ministop.co.kr</domain>
+    </domain-config>
+
+</network-security-config>

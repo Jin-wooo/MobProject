@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapActivity"
+    android:id="@+id/showLayout"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/mapLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottomactionbarMap"
+        android:layout_alignParentTop="true">
+
+        <net.daum.mf.map.api.MapView
+            android:id="@+id/map_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/shade_background"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true">
+
+        <ImageButton
+            android:id="@+id/btnReturn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/ic_menu_revert"
+            android:clickable="false"
+            android:visibility="gone"/>
+        <EditText
+            android:id="@+id/editTextSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:ems="12"
+            android:hint="  검색할 장소를 입력하세요"
+            android:inputType="textPersonName"
+            android:singleLine="true"
+            android:textSize="24sp"
+            android:imeOptions="actionSearch"/>
+
+        <ImageButton
+            android:id="@+id/btnSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:background="@android:drawable/ic_menu_search" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/searchArea"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchLayout"
+        android:layout_marginTop="20dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/shade_background"
+        android:visibility="gone"/>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/fabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_above="@id/bottomactionbarMap"
+        android:layout_alignParentBottom="false">
+
+        <RelativeLayout
+            android:id="@+id/aaa"
+            android:layout_width="133dp"
+            android:layout_height="134dp"
+            android:layout_gravity="right|bottom"
+            app:layout_dodgeInsetEdges="top|bottom">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabMyLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/fabConvSearch"
+                android:layout_marginRight="8dp"
+                android:clickable="true"
+                android:src="@android:drawable/ic_menu_mylocation"
+                app:fabCustomSize="45dp"
+                app:fabSize="mini"
+                tools:layout_toLeftOf="@id/fabConvSearch" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/fabConvSearch"
+                android:layout_alignRight="@id/fabConvSearch"
+                android:layout_marginBottom="8dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                app:backgroundTint="#D9120D"
+                app:fabCustomSize="45dp"
+                app:fabSize="mini"
+                tools:focusable="true"
+                tools:layout_toLeftOf="@id/fabConvSearch" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabConvSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:backgroundTint="#1CFFE8" />
+        </RelativeLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomactionbarMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_weight="0"
+        app:elevation="0dp"
+        app:itemBackground="@drawable/bottomback"
+        app:itemIconTint="@drawable/bottommenu"
+        app:itemTextColor="@drawable/bottommenu"
+        app:menu="@menu/menu_bottom" />
+
+
+
+</RelativeLayout>

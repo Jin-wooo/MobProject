@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<translate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="150"
+    android:fromXDelta="0"
+    android:toXDelta="430"
+    android:fillAfter="true">
+</translate>
+    <!--/*********************************************************
+        * Name : 정재욱
+        * Student ID : 20163155
+        * Program ID : trans.xml
+        * 애니메이션 증정행사 상품의 레이아웃을 오른쪽으로 밀어 덤 증정을 보여주는 부분
+        * Description : **********************************************************/-->

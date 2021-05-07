@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/PlaceListLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvPlaceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="5dp"
+        android:text="TextView"
+        android:textSize="21sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvPlaceAddr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvPlaceName"
+        android:layout_marginLeft="12dp"
+        android:text="TextView"
+        android:textColor="#9F9F9F" />
+
+    <TextView
+        android:id="@+id/tvPlaceType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tvPlaceName"
+        android:layout_marginLeft="6dp"
+        android:layout_toEndOf="@+id/tvPlaceName"
+        android:layout_toRightOf="@+id/tvPlaceName"
+        android:text="TextView"
+        tools:layout_toRightOf="@id/tvPlaceName" />
+
+    <TextView
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_below="@id/tvPlaceAddr"
+        android:background="@drawable/product_sep_line" />
+</RelativeLayout>
