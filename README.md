@@ -11,6 +11,7 @@
 
 ## Development Environment
 + Firebase
++ Selenium
 + Retrofit
 + Android Studio 4.0.1
 
