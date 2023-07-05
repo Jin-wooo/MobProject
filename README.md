@@ -25,6 +25,12 @@ Homepage : https://apis.map.kakao.com/
 
 ## Screenshot
 <img src="/ADDITIONAL/Conv_in_Screenshot.jpg" width="281" height="576" title="Conv_in_Map" alt="Conv_in_Map Screenshot"></img>
+</br>
+|편의점 검색 기능|장소 검색 기능|
+|--|--|
+|![ConvSearch](https://github.com/Jin-wooo/MobProject/assets/28581534/3c841f87-86ba-4f64-b1d8-984752404f2f)|![PlaceSearch](https://github.com/Jin-wooo/MobProject/assets/28581534/7fe2e86f-edc7-445a-9771-916992ff93b8)|
+
+
 
 ## Warning!
 > This program does not work properly on a PC. Debugging is also impossible. This is because there is a problem with the code, but Kakao Map API must only work in a mobile environment. So, use the code only to see how it was written, and if you want to see how it actually works, you can check it by installing app-release.apk in the ADDITIONAL directory. The part I made is MapActivity, so I can guarantee that part works, but other parts may not work.
